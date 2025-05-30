@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: exceluploader
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exceluploaderdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # Use 'validate' or 'none' in production
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
